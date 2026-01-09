@@ -28,8 +28,8 @@ html,body{
 }
 
 .card{
-    width: 150px;
-    height: 200px;
+    width: 250px;
+    height: 320px;
     border: 5px rgba(255, 255, 255, 0) solid;
     border-radius: 10px;
     overflow: hidden;
@@ -54,12 +54,12 @@ html,body{
   text-align: center;
 }
 .bottam .text{
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 400;
    color: rgb(255, 255, 255);
 }
 .bottam p{
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 300;
   line-height: 1;
   margin-bottom: 3px;
@@ -68,8 +68,8 @@ html,body{
   position: absolute;
   z-index: 100;
   transform: translate(-50%,-50%);
-  height: 15px;
-  width: 15px;
+  height: 20px;
+  width: 20px;
 }
 .cursor img{
   height: 100%;
