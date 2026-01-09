@@ -30,16 +30,24 @@ html,body{
 .card{
     width: 250px;
     height: 320px;
+    transition: border 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
     border: 5px rgba(255, 255, 255, 0) solid;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 0 40px rgb(255, 0, 132);
+    box-shadow: 0 0 00px rgb(255, 0, 132);
     position: relative;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background: 
     linear-gradient(black) padding-box,
-    conic-gradient(from var(--rotate),black,rgb(255, 0, 132),black) border-box;
+    conic-gradient(from var(--rotate),black,rgb(255, 0, 119),black) border-box;
     animation: bgAnimation infinite 4s;
+    animation-timing-function: linear;
+    animation-play-state: paused;
+    transition: all 0.3s linear;
+    color: white;
+}
+.card:hover{
+animation-play-state: running;
 }
 .card img{
   height: 100%;
@@ -50,19 +58,19 @@ html,body{
   position: absolute;
   bottom: 0;
   width: 100%;
-  color: whitesmoke;
   text-align: center;
 }
 .bottam .text{
   font-size: 20px;
-  font-weight: 400;
-   color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px rgb(255, 0, 119);
+  font-weight: 600;
 }
 .bottam p{
   font-size: 15px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1;
   margin-bottom: 3px;
+    text-shadow: 0 0 10px rgb(255, 0, 64);
 }
 .cursor{
   position: absolute;
@@ -70,6 +78,8 @@ html,body{
   transform: translate(-50%,-50%);
   height: 20px;
   width: 20px;
+  position: fixed;
+  pointer-events: none;
 }
 .cursor img{
   height: 100%;
