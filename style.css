@@ -1,0 +1,78 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,body{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  cursor: none;
+}
+ 
+@property --rotate{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+@keyframes bgAnimation{
+  from{
+    --rotate: 0deg;
+  }
+  to{
+     --rotate:360deg
+  }
+}
+
+.card{
+    width: 150px;
+    height: 200px;
+    border: 5px rgba(255, 255, 255, 0) solid;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 40px rgb(255, 0, 132);
+    position: relative;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: 
+    linear-gradient(black) padding-box,
+    conic-gradient(from var(--rotate),black,rgb(255, 0, 132),black) border-box;
+    animation: bgAnimation infinite 4s;
+}
+.card img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.card .bottam{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: whitesmoke;
+  text-align: center;
+}
+.bottam .text{
+  font-size: 15px;
+  font-weight: 400;
+   color: rgb(255, 255, 255);
+}
+.bottam p{
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 3px;
+}
+.cursor{
+  position: absolute;
+  z-index: 100;
+  transform: translate(-50%,-50%);
+  height: 15px;
+  width: 15px;
+}
+.cursor img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
